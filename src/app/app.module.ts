@@ -5,21 +5,36 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {ShoppinglistPage} from '../pages/shoppinglist/shoppinglist';
+import {AddShoppingPage} from '../pages/add-shopping/add-shopping';
+import { EditShoppingitemPage } from "../pages/edit-shoppingitem/edit-shoppingitem";
+
+
+import {AngularFireModule} from 'angularfire2';
+import {FIREBASE_CREDENTIALS} from './firebase.credentials';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    ShoppinglistPage,
+    AddShoppingPage,
+  EditShoppingitemPage 
   ],
   imports: [
     BrowserModule,
+    //initialise angularfiremodule with credentials from dashboard
+    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+    AngularFireDatabaseModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    ShoppinglistPage,
+    AddShoppingPage,
+    EditShoppingitemPage
   ],
   providers: [
     StatusBar,
