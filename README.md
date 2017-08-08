@@ -1,4 +1,6 @@
-This is a Shopping Application with Ionic3,Firebase and Angular4
+This is a Shopping Application with Ionic3,Firebase and Angular4.
+
+This application performs basic CRUD operations and changes are updated instantly using Firebase
 
 Shopping App
 ![screencapture-localhost-8100-ionic-lab-1502185364411](https://user-images.githubusercontent.com/25843455/29067664-26d2c102-7c51-11e7-95a8-ef308de4e379.png)
